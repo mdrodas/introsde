@@ -1,64 +1,24 @@
 # LAB00: Labs Requirements
 
-**Introduction to Service Design and Engineering | University of Trento | [Webpage](https://sites.google.com/site/introsdeunitn/lab-sessions/lab-session-1 "Permalink to LAB01: Introduction to the Lab and brief Java review")**
+**Introduction to Service Design and Engineering | University of Trento**
 
 What's an example of a Service-Oriented Architecture? How does the architecture of the web look like? Where in that architecture is our work going to be centered during these lab sessions? What tools and technologies are we going to use to implement our services?.&nbsp;In this session, we will provide some answers to these questions, in a very brief manner, before passing to the hands-on practice lab in which we will focus on&nbsp;the main characteristics of the programming language we will use during the lab:&nbsp;Java&nbsp;&nbsp;
 
 ## Slides &amp; Code
 
-Links: [PPT slides][16] | [PDF slides][17] | [Source code][18]
+Links: [PDF slides][17] | [Source code][18]
 
 ## Guiding Notes
 
 The guiding notes below are a summarized version of what is already on the slides.&nbsp;
 
-* Start by browsing the introductory first slides of the lesson, introducing the key components in the&nbsp;Architecture of the Web. These slides will give you an idea of where will be placed the focus of our work in lab sessions and what technologies we will be using.&nbsp;&nbsp;
-* Make sure you have downloaded and installed Java in your system&nbsp;. In your terminal/cmd windows, execute
+* Download and install Java in your system&nbsp;. In your terminal/cmd windows, execute
 ```
 $ java -version
 ```
-* If the the binary does not exists, follow [these instructions][1] to download and install (officially, we will use Java 1.8 but any version bigger than 1.7 will work as well)
+* If the the binary does not exists, follow [these instructions][1] to download and install (officially, we will use Java 1.8)
 
-* Revise the slides about&nbsp;Programming in Java, which will give you a very basic&nbsp;overview of the Java programming language.
-* Examine, compile and execute the classes of the [Example][2]&nbsp;(code is in main repository)
-* Try it out!
 
-```
-# Compile
-$ javac HealthProfileReader.java
-```
-```
-# Execute the program
-$ java HealthProfileReader Cristhian Parra
-Cristhian Parra is not in the database
-$ java HealthProfileReader Pinco Pallino
-Pinco Pallino's health profile is: Height=1.72, Weight=85.5
-```
-
-* Exercises
-    * In Person.java:
-        1. Add a Long attribute to store the person's personId (including accessor methods)
-        2. Add a String attribute to store the person's birthdate (including accessor methods, use as date format "YYYY-mm-dd")
-        3. Update the constructors accordingly to include these attributes
-        4. Update the empty constructor to set the personId to a random number between 1 and 9999.
-        5. [optional/advanced] Update the empty constructor to set the birthdate string to a random date between 1950 and the current Year. 
-    * In HealthProfileReader.java:
-        1. Change the database so that the key for each person is the personId
-        2. Add the static method createPerson(Long personId, String firstname, String lastname, String birthdate), which creates a new person and adds it to the Database
-        3. Add the static method displayHealthProfile(Long personId) , which should lookup the person in the database identified by personId and then print the related healthProfile.
-        4. Add the static method updateHealthProfile(Long personId, Double height, Double weight) , which should lookup the person in the database identified by personId and update the related healthProfile with the indicated height and weight
-        5. Replace the main program with a version that takes the method name from command-line arguments and to executes it: 
-           ```java HealthProfileReader method_name method_parameters```
-           ```Example: java HealthProfileReader displayHealthProfile 1```
-* More about Programming in Java
-    * [Java Cheat Sheet][3]&nbsp;&nbsp;
-    * [Java Introductory Tutorial][4] &nbsp;
-    * [Other Java Tutorials][5]&nbsp;
-    * [Recommended book on learning programming with Java][6]&nbsp;
-
-### Homework: things To Do BEFORE NEXT session
-
-* If you are not familiar with git, follow the tutorial at [Try Github][7]&nbsp;(15 minutes)&nbsp;
 * Make sure to install the following tools (especially, make sure that both **Tomcat** and **Axis2** are ready to use, and that both tomcat and ANT binaries are in the PATH (see additional notes below))
     * [Git][8]&nbsp;(version 1.8 or higher)
     * [Msysgit (for windows) ][9]&nbsp;
@@ -70,7 +30,7 @@ Pinco Pallino's health profile is: Height=1.72, Weight=85.5
     * Create your account in [Github][15] (if you haven't)
     * Fork the lab repository to your account (i.e., create a copy of the repository in your github account)
     ```
-    Go to https://github.com/cdparra/introsde.git.
+    Go to https://github.com/mdrodas/introsde.
     Click on "Fork" in the upper right corner of the page
     ```
     * Clone your fork in your local machine (i.e., download your copy to your machine)
@@ -79,7 +39,7 @@ Pinco Pallino's health profile is: Height=1.72, Weight=85.5
     ```
     * Add the original repository as a remote, in order to Fetch future updates on the original repository (in case there is any)
     ```
-    git remote add upstream https://github.com/cdparra/introsde.git
+    git remote add upstream https://github.com/mdrodas/introsde.git
     ```.
 * Learn the&nbsp;Lab session workflow:
     * Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original)&nbsp;
@@ -89,7 +49,6 @@ Pinco Pallino's health profile is: Height=1.72, Weight=85.5
     ```
     * On your local repository, inside the folder for the session, create a folder called myworkspace.&nbsp;
     * Put your personal work in this folder. We will not push changes of our personal workspaces to github.&nbsp;
-        * If, however, you wish to push your changes to github, you will have to edit the .gitignore in the root of your local repo and remove "myworkspace" from it.
         * Then,&nbsp;at the end of each session of work, add your changes to your repository stash
            ```
             git add myworkspace
@@ -183,7 +142,6 @@ Do the same for all other binaries you will need (unless the binary folder is al
 
 
 [1]: http://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html
-[2]: https://github.com/cdparra/introsde/tree/master/lab01/Example/src
 [3]: http://introcs.cs.princeton.edu/java/11cheatsheet/
 [4]: http://www.vogella.com/tutorials/JavaIntroduction/article.html#firstjava
 [5]: http://www.mkyong.com/all-tutorials-on-mkyong-com/
@@ -197,9 +155,5 @@ Do the same for all other binaries you will need (unless the binary folder is al
 [13]: http://tomcat.apache.org/tomcat-8.0-doc/setup.html
 [14]: http://www.eclipse.org/downloads/
 [15]: http://github.com
-[16]: https://drive.google.com/file/d/0B7ShzcEnCJFNd010SmJOV19IR3M/edit?usp=sharing
 [17]: https://drive.google.com/file/d/0B7ShzcEnCJFNMkU0TWhYVDdGNDQ/edit?usp=sharing
-[18]: https://github.com/cdparra/introsde/tree/master/lab01
 [19]: http://axis.apache.org/axis2/java/core/download.cgi
-
-  
