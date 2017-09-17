@@ -1,4 +1,4 @@
-IntroSDE@UniTN
+IntroSDE@UniTN 2017
 ============
 
 Lab resources, code samples and other materials used in the course about [Introduction to Service Design and Engineering][1], developed at the [Department of Information Engineering and Computer Science][2] of the [University of Trento, Italy][3]. 
@@ -7,7 +7,7 @@ Lab resources, code samples and other materials used in the course about [Introd
 
 Each module is prepared to match one hands-on session. However, depending on how fast we move forward in reality, it might be that some modules take less than one session, while other take more. 
 
-* **[Before the Lab][4]**: Before our first lab hands-on session, make sure you visit this page to find out what you will need for the lab and a brief introduction of what to expect. 
+* **[LAB00: Lab Requirements][4]**: The required tools for working in the lab hands-on session. Make sure you visit this page to find out what you will need for the next lab and a brief introduction of what to expect. 
 
 * **[LAB01: Introduction to the Lab and Brief Java Review][5]**: Introduction to the course by taking a brief look to the architecture of the web and looking at where our work will concentrate within that architecture. Review of the tools and technologies we will use, with emphasis on the programming language: Java. For those without experience in Java, there will be a brief hands on tutorial. 
 
@@ -39,6 +39,8 @@ The code in this repository is an update of the original trunk of source code of
 [1]: https://sites.google.com/site/introsdeunitn/
 [2]: http://www.disi.unitn.it/
 [3]: http://www.unitn.it/
+
+
 [4]: https://github.com/cdparra/introsde/tree/master/lab01
 [5]: https://github.com/cdparra/introsde/tree/master/lab02 
 [6]: https://github.com/cdparra/introsde/tree/master/lab03
