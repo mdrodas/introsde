@@ -39,7 +39,7 @@ For the Labs we need the following applications:
 * Learn the&nbsp;Lab session workflow:
 * Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original)&nbsp;
     ```
-    git fetch upstream &nbsp; 
+    git fetch upstream; 
     git merge upstream/master;
     ```
 * Put your personal work in your own folder. We will not push changes of our personal workspaces to github.&nbsp;
@@ -71,7 +71,7 @@ We need to add to the path the bin folder of the following applications (if it w
 * Control Panel -&gt; System -&gt; Advanced tab -&gt; Environment Variables -&gt; System Variables&nbsp;
 * Edit the 'path' variable and append the location of your bin folder onto the existing value (separated by a semicolon).&nbsp;
 
-```PATH = ;C:\Program Files\Java\jdk1.8\bin\;```
+```PATH = $PATH;C:\Program Files\Java\jdk1.8\bin\;```
 
 * Add the following to the file named .bash_profile (or .profile), located in your home directory
 
