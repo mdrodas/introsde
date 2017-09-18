@@ -35,14 +35,12 @@ For the Labs we need the following applications:
 * Add the original repository as a remote, in order to Fetch future updates on the original repository (in case there is any)
     ```
     git remote add upstream https://github.com/mdrodas/introsde.git
-    ```.
-
-	
+    ```
 * Learn the&nbsp;Lab session workflow:
 * Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original)&nbsp;
     ```
-    git fetch upstream &nbsp; .
-    git merge upstream/master
+    git fetch upstream &nbsp; 
+    git merge upstream/master;
     ```
 * Put your personal work in your own folder. We will not push changes of our personal workspaces to github.&nbsp;
     * Then,&nbsp;at the end of each session of work, add your changes to your repository stash
@@ -58,22 +56,28 @@ For the Labs we need the following applications:
             git push master
             ```
 
-## Additional notes
+## Additional Configurations
 
 ### Setting up PATH variables:&nbsp;
+
+We need to add to the path the bin folder of the following applications (if it was not already addded):
+* Java.
+* Ant.
+* Maven.
+* Tomcat.
 
 #### In windows:&nbsp;
 
 * Control Panel -&gt; System -&gt; Advanced tab -&gt; Environment Variables -&gt; System Variables&nbsp;
 * Edit the 'path' variable and append the location of your bin folder onto the existing value (separated by a semicolon).&nbsp;
 
-```PATH = ;C:\Program Files\Java\jdk1.6.0_02in\;```
+```PATH = ;C:\Program Files\Java\jdk1.8\bin\;```
 
 * Add the following to the file named .bash_profile (or .profile), located in your home directory
 
 ```export PATH=$PATH:/path/to/your/binary/folder/```
 
-Do the same for all other binaries you will need (unless the binary folder is already added automatically) (Ant, Tomcat, etc.)&nbsp;
+
 
 ### Installing Tomcat and Axis2 
 * First, install tomcat. Go to apache [tomcat website][10]. 
