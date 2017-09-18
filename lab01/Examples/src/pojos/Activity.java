@@ -9,25 +9,25 @@ public class Activity {
 	private String name;
 	private String description;
 
-	public HealthProfile(String name, String description) {
+	public Activity(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
 
-	public HealthProfile() {
+	public Activity() {
 		this.name = "generic";
 		this.description = "doSomething";
 	}
 
-	public double getName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setName(double name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	
-	public double getDescription() {
+	public String getDescription() {
 		return description;
 	}
 

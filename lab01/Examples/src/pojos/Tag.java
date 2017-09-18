@@ -8,25 +8,25 @@ public class Tag {
 	private String label;
 	private String lang;
 
-	public HealthProfile(String label, String lang) {
+	public Tag(String label, String lang) {
 		this.label = label;
 		this.lang = lang;
 	}
 
-	public HealthProfile() {
+	public Tag() {
 		this.label = "generic";
 		this.lang = "doSomething";
 	}
 
-	public double getLabel() {
+	public String getLabel() {
 		return label;
 	}
 
-	public void setLabel(double label) {
+	public void setLabel(String label) {
 		this.label = label;
 	}
 	
-	public double getLang() {
+	public String getLang() {
 		return lang;
 	}
 
