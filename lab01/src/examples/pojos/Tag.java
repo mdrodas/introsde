@@ -1,4 +1,4 @@
-package pojos;
+package examples.pojos;
 
 /**
   * Class with the general description of Activities assigning a Tag.

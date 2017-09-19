@@ -1,4 +1,4 @@
-package pojos;
+package examples.pojos;
 
 public class HealthProfile {
 	private double weight; // in kg

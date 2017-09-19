@@ -64,21 +64,22 @@ For the Labs we need the following applications:
 
 ### Setting up PATH variables;
 
-We need to add to the path the bin folder of the following applications (if it was not already addded):
-* Java.
-* Ant.
-* Maven.
-* Tomcat.
+We need to create HOME variables and add the bin folder to the PATH for the following applications (if it was not already added):
+* Java (JAVA_HOME and bin folder added to PATH).
+* Ant (ANT_HOME and bin folder added to PATH).
+* Maven (ANT_HOME and bin folder added to PATH).
+* Tomcat (CATALINA_HOME and bin folder added to PATH).
 
 #### In windows:;
 
 * Control Panel -&gt; System -&gt; Advanced tab -&gt; Environment Variables -&gt; System Variables
-* Edit the 'path' variable and append the location of your bin folder onto the existing value (separated by a semicolon).
-```PATH = $PATH;C:\Program Files\Java\jdk1.8\bin\;```
+* Edit the 'path' variable and add the location of your bin folder into the existing value. In versions of windows lower than windows 10 the path is concatenated with semicolons.
+```PATH = C:\binfolder\;C:\Program Files\Java\jdk1.8\bin\;```
 * Add the following to the file named .bash_profile (or .profile), located in your home directory
 ```export PATH=$PATH:/path/to/your/binary/folder/```
 
 ### Installing Tomcat 
+
 * First, install tomcat. [tomcat website][10]. 
 * Download the zip version of the latest version of Tomcat application manager. 
 * Unzip it somewhere (e.g. /opt or C:\) 

@@ -110,60 +110,58 @@ John Doe's health profile is: Height=1.72, Weight=85.5
 
 ## Additional Checklists
 
-### Checklist of Environmental Variables: PATH variables:&nbsp;
+### Setting up PATH variables;
 
-* We need to add to the path the bin folder of the following applications (if it was not already addded):
-	* Java.
-	* Ant.
-	* Maven.
-	* Tomcat.
+We need to create HOME variables and add the bin folder to the PATH for the following applications (if it was not already added):
+* Java (JAVA_HOME and bin folder added to PATH).
+* Ant (ANT_HOME and bin folder added to PATH).
+* Maven (ANT_HOME and bin folder added to PATH).
+* Tomcat (CATALINA_HOME and bin folder added to PATH).
 
-#### In windows:&nbsp;
+#### In windows:;
 
-* Control Panel -&gt; System -&gt; Advanced tab -&gt; Environment Variables -&gt; System Variables&nbsp;
-* Edit the 'path' variable and append the location of your bin folder onto the existing value (separated by a semicolon).&nbsp;
-
-```PATH = ;C:\Program Files\Java\jdk1.8\bin\;```
-
+* Control Panel -&gt; System -&gt; Advanced tab -&gt; Environment Variables -&gt; System Variables
+* Edit the 'path' variable and add the location of your bin folder into the existing value. In versions of windows lower than windows 10 the path is concatenated with semicolons.
+```PATH = C:\binfolder\;C:\Program Files\Java\jdk1.8\bin\;```
 * Add the following to the file named .bash_profile (or .profile), located in your home directory
-
 ```export PATH=$PATH:/path/to/your/binary/folder/```
 
+### Installing Tomcat 
 
-### Installing Tomcat and Axis2
-
-* First, install tomcat. Go to apache [tomcat website][10]. 
+* First, install tomcat. [tomcat website][10]. 
 * Download the zip version of the latest version of Tomcat application manager. 
 * Unzip it somewhere (e.g. /opt or C:\) 
 * Set environment variables: 
+``` 
+# if you are in unix/linux/mac or you are using msysgit from windows
+export CATALINA_HOME=/opt/apache-tomcat-8.5
+# windows (better use the Windows Environment configuration)
+set CATALINA_HOME=C:\apache-tomcat-8.5
 ```
-    # if you are in unix/linux/mac or you are using msysgit from windows
-    export CATALINA_HOME=/opt/apache-tomcat-8.5
- 
-    # windows
-    set CATALINA_HOME=C:\apache-tomcat-8.5
-```
-
-**Observation:** for those using msysgit in windows, beware that the "\" is a escape character, so you can use either *C:\\apache-tomcat-8.5* or */C/apache-tomcat-8.5* 
-
 * Start the server (to make things easier, add also these binaries to your PATH
 ```
-    # if you are in unix/linux/mac or you are using msysgit from windows
-    $CATALINA_HOME/bin/startup.sh
-
-    # windows
-    %CATALINA_HOME%\bin\startup.bat
+# if you are in unix/linux/mac or you are using msysgit from windows
+$CATALINA_HOME/bin/startup.sh
+# windows
+%CATALINA_HOME%\bin\startup.bat
 ```
+* [CHECKPOINT 1] Now, go to http://localhost:8080/ and if you see the apache tomcat page, you are fine.
 
-* Now, go to http://localhost:8080/ and if you see the apache tomcat cat, you are fine. 
-* **Next step:** donwload and install [axis2][14]. You can either download the war package directly, or download the binary distribution, unzip it somewhere and then build the war. Let's do the second. For this lab session, I downloaded the axis2-1.7.6-bin.zip distribution. 
+### Installing Axis2
+ 
+* Download [axis2][14]. 
+* For the installation you should follow the [axis2 Installation Guide][15]. The [guide][15] shows two methods of installation:
+	
+    1. Installing Axis2 as a Standalone Server using the Standard Binary Distribution.
+    2. (Recommended) Installing Axis in a Servlet Container (Using the axis2.war).
+	
+The following are a summary of the You can either download the war package directly, or download the binary distribution, unzip it somewhere and then build the war. Let's do the second. For this lab session, I downloaded the axis2-1.7.6-bin.zip distribution. 
 ```
     unzip axis2-1.7.6-bin.zip  
     mv axis2-1.7.6 /opt
 ```
-**Observation:** there might be problems with the classpath if you are using only the war distribution. One way of checking exactly what you have in the class path is running *ant SOME_EXISTING_TARGET -diagnostics*. To avoid potential problems, use the binary distribution. 
 
-* Now, you need to enter the weabpp folder in the axis home and create the package war of axis2. How? **Using ant** ;-)
+* Now, you need to enter the webapp folder in the axis home and create the package war of axis2. How? **Using ant** ;-)
 ```
     cd /opt/axis2-1.7.6/webapp
     ant create.war
@@ -173,9 +171,9 @@ John Doe's health profile is: Height=1.72, Weight=85.5
     ...
 ```
 * Deploy the war in tomcat. For this, you need to access the tomcat manager in your browser (http://localhost:8080/manager/html) 
-* By default, Tomcat does not enable admin or manager access. To enable it, you will have to edit the $TOMCAT_HOME/conf/tomcat-users.xml manually by adding the following (or uncommenting if it is there)
+* Check the configuration file $TOMCAT_HOME/conf/tomcat-users.xml to enable the administration of tomcat(add or uncomment the followin line, if it is there)
 ```
-    <user username="admin" password="whateverpasswordyouwantiuseadmin" roles="manager-gui,tomcat"/>
+    <user username="admin" password="whateverpasswordyouwantiuseadmin" roles="admin-gui,manager-gui"/>
 ```
 * Now, you can access the manager in  http://localhost:8080/manager/html and deploy axis war. 
 * Go to the section Deploy -> WAR file to deploy -> Choose File and select the war you have just created.  
@@ -189,8 +187,7 @@ John Doe's health profile is: Height=1.72, Weight=85.5
     Follow the link http://localhost:8080/axis2/axis2-web/HappyAxis.jsp
 ```
 
-* It should should show you a HappyAxis page with the list of needed libraries and their status (if they are or not in your system).  If the Happy Axis page is coming with GREEN color then it means that axis2 is successfully deployed. 
-
+* [CHECKPOINT 2] It should should show you a HappyAxis page with the list of n
 
 
 

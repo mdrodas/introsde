@@ -5,10 +5,6 @@
 
 How can we automate compiling and executing java programs? What kind of technology is behind this automation? What do we mean, in practical terms, when we speak of a "service"?.&nbsp;In this session, we will provide some answers to these questions. We will briefly introduce how will we work with Eclipse during sessions (although students are free of working with the IDE of their own choosing). We will see an example of what kind of technology is behind the automation that IDEs provide (ANT), and in turn, what language fuels that technology, which is one of the cornerstones of the SOA world (XML). The lesson will finalize with a first example of a service, using Axis2. 
 
-## Slides &amp; Code
-
-Links: [PPT slides][1] | [PDF slides][2] | [Source code][3]
-
 ## Guiding Notes
 
 The guiding notes below are a summarized version of what is already on the slides.&nbsp;
@@ -217,67 +213,7 @@ Can't we just use an IDE and forget about?. Yes, we can use an IDE and forget ab
 
 * [Java Introduction (if you have never seen it before)][6]
 * [ANT extended tutorial][7]
-
-### Installing Tomcat and Axis2 (a copy of the notes for the first Lab)
-
-* First, install tomcat. Go to apache [tomcat website][4]. 
-* Download the zip version of the latest version of Tomcat application manager. 
-* Unzip it somewhere (e.g. /opt or C:\) 
-* Set environment variables: 
-```
-    # if you are in unix/linux/mac or you are using msysgit from windows
-    export CATALINA_HOME=/opt/apache-tomcat-7.0.39
- 
-    # windows
-    set CATALINA_HOME=C:\apache-tomcat-7.0.39
-```
-
-**Observation:** for those using msysgit in windows, beware that the "\" is a escape character, so you can use either *C:\\apache-tomcat-7.0.39* or */C/apache-tomcat-7.0.39* 
-
-* Start the server (to make things easier, add also these binaries to your PATH
-```
-    # if you are in unix/linux/mac or you are using msysgit from windows
-    $CATALINA_HOME/bin/startup.sh
-
-    # windows
-    %CATALINA_HOME%\bin\startup.bat
-```
-* Now, go to http://localhost:8080/ and if you see the apache tomcat cat, you are fine. 
-* **Next step:** donwload and install [axis2][5]. You can either download the war package directly, or download the binary distribution, unzip it somewhere and then build the war. Let's do the second. For this lab session, I downloaded the axis2-1.6.2-bin.zip distribution. 
-```
-    unzip axis2-1.6.2-bin.zip  
-    mv axis2-1.6.2 /opt
-```
-**Observation:** there might be problems with the classpath if you are using only the war distribution. One way of checking exactly what you have in the class path is running *ant SOME_EXISTING_TARGET -diagnostics*. To avoid potential problems, use the binary distribution. 
-
-* Now, you need to enter the weabpp folder in the axis home and create the package war of axis2. How? **Using ant** ;-)
-```
-    cd /opt/axis2-1.6.2/webapp
-    ant create.war
-    ...
-    create.war:
-        [war] Building war: /opt/axis2-1.6.2/dist/axis2.war
-    ...
-```
-* Deploy the war in tomcat. For this, you need to access the tomcat manager in your browser (http://localhost:8080/manager/html) 
-* By default, Tomcat does not enable admin or manager access. To enable it, you will have to edit the $TOMCAT_HOME/conf/tomcat-users.xml manually by adding the following (or uncommenting if it is there)
-```
-    <user username="admin" password="whateverpasswordyouwantiuseadmin" roles="manager-gui,tomcat"/>
-```
-* Now, you can access the manager in  http://localhost:8080/manager/html and deploy axis war. 
-* Go to the section Deploy -> WAR file to deploy -> Choose File and select the war you have just created.  
-* Now that it is deployed, you can open axis2 
-```
-    Follow this link http://localhost:8080/axis2. 
-```
-
-* Should show you a page with 3 links: services, validate, administration. Open validate. 
-```
-    Follow the link http://localhost:8080/axis2/axis2-web/HappyAxis.jsp
-```
-
-* It should should show you a HappyAxis page with the list of needed libraries and their status (if they are or not in your system).  If the Happy Axis page is coming with GREEN color then it means that axis2 is successfully deployed. 
-
+* If you have issues with the installation of any related tool read the Readme of lab00. 
 
 [1]: https://drive.google.com/file/d/0B7ShzcEnCJFNVi1LWERhbVFoQ3c/edit?usp=sharing
 [2]: https://github.com/cdparra/introsde/tree/master/lab02/Example/

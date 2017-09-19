@@ -1,7 +1,7 @@
 // classes are grouped together in 'packages'
 // Classes in the same pakage already see each other. 
 // If a class is in another package, in other to see it, you need to import it
-package pojos;
+package examples.pojos;
 
 // This is a typical Java Class. 
 public class Person {

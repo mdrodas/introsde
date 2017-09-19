@@ -1,8 +1,10 @@
+package examples;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import pojos.HealthProfile;
-import pojos.Person;
+import examples.pojos.HealthProfile;
+import examples.pojos.Person;
 
 
 public class HealthProfileReader {

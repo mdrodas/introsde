@@ -1,4 +1,4 @@
-package pojos;
+package examples.pojos;
 
 /**
   * Class with the prefer activity of a Person.
