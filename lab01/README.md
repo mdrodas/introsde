@@ -85,24 +85,25 @@ John Doe's health profile is: Height=1.72, Weight=85.5
    	* Add the original repository as a remote, in order to Fetch future updates on the original repository (in case there is any)
     ```
     git remote add upstream https://github.com/cdparra/introsde.git
-    ```.
-	* Learn the&nbsp;Lab session workflow:
-		* Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original)&nbsp;
+    ```
+	* Learn the Lab session workflow:
+		* Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original);
     ```
     git fetch upstream &nbsp;
     git merge upstream/master;
     ```
-    	* On your local repository, inside the folder for the session, create a folder called myworkspace.&nbsp;
-    	* Put your personal work in this folder. We will not push changes of our personal workspaces to github.&nbsp;
-       	* Then,&nbsp;at the end of each session of work, add your changes to your repository stash
+    
+	* On your local repository, inside the folder for the session, create a folder called myworkspace.&nbsp;
+	* Put your personal work in this folder. We will not push changes of our personal workspaces to github.&nbsp;
+	* Then, at the end of each session of work, add your changes to your repository stash
            ```
             git add myworkspace
             ```
-        	* Commit your changes to your local repository
+    * Commit your changes to your local repository
             ```
             git commit -m "my work for labXX"
             ```
-        	* Push your changes to your github repository
+    * Push your changes to your github repository
             ```
             git push master
             ```
