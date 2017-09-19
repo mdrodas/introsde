@@ -22,7 +22,7 @@ $ java -version
 
 ```
 # Compile
-$ javac HealthProfileReader.java
+$ javac examples\HealthProfileReader.java
 ```
 ```
 # Execute the program
@@ -123,6 +123,7 @@ We need to create HOME variables and add the bin folder to the PATH for the foll
 * Control Panel -&gt; System -&gt; Advanced tab -&gt; Environment Variables -&gt; System Variables
 * Edit the 'path' variable and add the location of your bin folder into the existing value. In versions of windows lower than windows 10 the path is concatenated with semicolons.
 ```PATH = C:\binfolder\;C:\Program Files\Java\jdk1.8\bin\;```
+#### In Unix/Linux/Mac:;
 * Add the following to the file named .bash_profile (or .profile), located in your home directory
 ```export PATH=$PATH:/path/to/your/binary/folder/```
 
