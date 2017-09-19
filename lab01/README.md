@@ -47,8 +47,8 @@ John Doe's health profile is: Height=1.72, Weight=85.5
         5. Replace the main program with a version that takes the method name from command-line arguments and to executes it: 
            ```java HealthProfileReader method_name method_parameters```
            ```Example: java HealthProfileReader displayHealthProfile 1```
-	* More about Programming in Java
-    * [Java Cheat Sheet][3]&nbsp;&nbsp;
+* More about Programming in Java
+	* [Java Cheat Sheet][3]&nbsp;&nbsp;
     * [Java Introductory Tutorial][4] &nbsp;
     * [Other Java Tutorials][5]&nbsp;
     * [Recommended book on learning programming with Java][6]&nbsp;
@@ -56,32 +56,33 @@ John Doe's health profile is: Height=1.72, Weight=85.5
 ## Homework: CheckList for NEXT session
 
 ### For the Labs we need the following applications:
-	* Java (version 1.8) - [download][1]
-	* Git (version 2.14) - [download][2]
-	* Git GUI Client [Check List][3] (recommended: [SourceTree][4])
-	* Text Editor of your preferences (recommended: [notepad++ 7.5.1][5];  [Sublime Text 3][6])
-	* Console (Command Prompt; Linux Console)
-	* IDE - Eclipse for Java EE Developers (Version 4.7 - Oxygen) - [download][7]
-		* Install from the Eclipse Market (if not installed): Apache IvyDE - [website][8]
-		* Install from the Eclipse Market (if not installed): Maven Integration for Eclipse - [website][9]
-	* Apache Tomcat (version 8.5) - [download][10]
-	* Apache Maven (version 3.5) - [download][11]
-	* Postman (version 5.2)- [download][12]
+
+* Java (version 1.8) - [download][1]
+* Git (version 2.14) - [download][2]
+* Git GUI Client [Check List][3] (recommended: [SourceTree][4])
+* Text Editor of your preferences (recommended: [notepad++ 7.5.1][5];  [Sublime Text 3][6])
+* Console (Command Prompt; Linux Console)
+* IDE - Eclipse for Java EE Developers (Version 4.7 - Oxygen) - [download][7]
+	* Install from the Eclipse Market (if not installed): Apache IvyDE - [website][8]
+	* Install from the Eclipse Market (if not installed): Maven Integration for Eclipse - [website][9]
+* Apache Tomcat (version 8.5) - [download][10]
+* Apache Maven (version 3.5) - [download][11]
+* Postman (version 5.2)- [download][12]
 
 ### CheckList for GIT Repository
-	* If you are not familiar with git, follow the tutorial at [Try Github][7]&nbsp;(15 minutes)&nbsp;
-	* Configure your Github account and repository:
-    	* Create your account in [Github][15] (if you haven't)
-    	* Fork the lab repository to your account (i.e., create a copy of the repository in your github account)
+* If you are not familiar with git, follow the tutorial at [Try Github][7]&nbsp;(15 minutes)&nbsp;
+* Configure your Github account and repository:
+	* Create your account in [Github][13] (if you haven't)
+	* Fork the lab repository to your account (i.e., create a copy of the repository in your github account)
     ```
     Go to https://github.com/cdparra/introsde.git.
     Click on "Fork" in the upper right corner of the page
     ```
-    	* Clone your fork in your local machine (i.e., download your copy to your machine)
+   	* Clone your fork in your local machine (i.e., download your copy to your machine)
     ```
     git clone https://github.com/YOUR_USERNAME/introsde.git
     ```
-    	* Add the original repository as a remote, in order to Fetch future updates on the original repository (in case there is any)
+   	* Add the original repository as a remote, in order to Fetch future updates on the original repository (in case there is any)
     ```
     git remote add upstream https://github.com/cdparra/introsde.git
     ```.
@@ -106,29 +107,30 @@ John Doe's health profile is: Height=1.72, Weight=85.5
             git push master
             ```
 
-## Additional notes
+## Additional Checklists
 
 ### Checklist of Environmental Variables: PATH variables:&nbsp;
 
-	* We need to add to the path the bin folder of the following applications (if it was not already addded):
-		* Java.
-		* Ant.
-		* Maven.
-		* Tomcat.
+* We need to add to the path the bin folder of the following applications (if it was not already addded):
+	* Java.
+	* Ant.
+	* Maven.
+	* Tomcat.
 
 #### In windows:&nbsp;
 
-	* Control Panel -&gt; System -&gt; Advanced tab -&gt; Environment Variables -&gt; System Variables&nbsp;
-	* Edit the 'path' variable and append the location of your bin folder onto the existing value (separated by a semicolon).&nbsp;
+* Control Panel -&gt; System -&gt; Advanced tab -&gt; Environment Variables -&gt; System Variables&nbsp;
+* Edit the 'path' variable and append the location of your bin folder onto the existing value (separated by a semicolon).&nbsp;
 
 ```PATH = ;C:\Program Files\Java\jdk1.8\bin\;```
 
-	* Add the following to the file named .bash_profile (or .profile), located in your home directory
+* Add the following to the file named .bash_profile (or .profile), located in your home directory
 
 ```export PATH=$PATH:/path/to/your/binary/folder/```
 
 
-### Installing Tomcat and Axis2 
+### Installing Tomcat and Axis2
+
 * First, install tomcat. Go to apache [tomcat website][10]. 
 * Download the zip version of the latest version of Tomcat application manager. 
 * Unzip it somewhere (e.g. /opt or C:\) 
@@ -151,6 +153,7 @@ John Doe's health profile is: Height=1.72, Weight=85.5
     # windows
     %CATALINA_HOME%\bin\startup.bat
 ```
+
 * Now, go to http://localhost:8080/ and if you see the apache tomcat cat, you are fine. 
 * **Next step:** donwload and install [axis2][14]. You can either download the war package directly, or download the binary distribution, unzip it somewhere and then build the war. Let's do the second. For this lab session, I downloaded the axis2-1.7.6-bin.zip distribution. 
 ```
