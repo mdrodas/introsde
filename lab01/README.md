@@ -5,10 +5,6 @@
 
 What's an example of a Service-Oriented Architecture? How does the architecture of the web look like? Where in that architecture is our work going to be centered during these lab sessions? What tools and technologies are we going to use to implement our services?.&nbsp;In this session, we will provide some answers to these questions, in a very brief manner, before passing to the hands-on practice lab in which we will focus on&nbsp;the main characteristics of the programming language we will use during the lab:&nbsp;Java&nbsp;&nbsp;
 
-## Slides &amp; Code
-
-Links: [PPT slides][16] | [PDF slides][17] | [Source code][18]
-
 ## Guiding Notes
 
 The guiding notes below are a summarized version of what is already on the slides.&nbsp;
@@ -18,7 +14,7 @@ The guiding notes below are a summarized version of what is already on the slide
 ```
 $ java -version
 ```
-* If the the binary does not exists, follow [these instructions][1] to download and install (officially, we will use Java 1.8 but any version bigger than 1.7 will work as well)
+* If the the binary does not exists, follow [these instructions][1] to download and install (officially, we will use Java 1.8)
 
 * Revise the slides about&nbsp;Programming in Java, which will give you a very basic&nbsp;overview of the Java programming language.
 * Examine, compile and execute the classes of the [Example][2]&nbsp;(code is in main repository)
@@ -30,7 +26,7 @@ $ javac HealthProfileReader.java
 ```
 ```
 # Execute the program
-$ java HealthProfileReader Cristhian Parra
+$ java HealthProfileReader John Doe
 Cristhian Parra is not in the database
 $ java HealthProfileReader Pinco Pallino
 Pinco Pallino's health profile is: Height=1.72, Weight=85.5
