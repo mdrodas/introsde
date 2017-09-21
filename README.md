@@ -39,8 +39,6 @@ The code in this repository is an update of the original trunk of source code of
 [1]: https://sites.google.com/site/introsdeunitn/
 [2]: http://www.disi.unitn.it/
 [3]: http://www.unitn.it/
-
-     https://github.com/mdrodas/introsde/tree/master/lab01
 [4]: https://github.com/mdrodas/introsde/tree/master/lab01
 [5]: https://github.com/mdrodas/introsde/tree/master/lab02 
 [6]: https://github.com/mdrodas/introsde/tree/master/lab03
