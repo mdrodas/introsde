@@ -28,34 +28,35 @@ For the Labs we need the following applications:
     * Click on "Fork" in the upper right corner of the page.
     
 * Clone your fork in your local machine (i.e., download your copy to your machine)
-
 ```
     git clone https://github.com/YOUR_USERNAME/introsde.git
 ```
 * Add the original repository as a remote, in order to Fetch future updates on the original repository (in case there is any)
-
 ```
     git remote add upstream https://github.com/mdrodas/introsde.git
 ```
-* Learn the Lab session workflow:
-* Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original).
 
+## Learn the Lab session workflow:
+
+1. Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original).
 ```
     git fetch upstream; 
     git merge upstream/master;
 ```
-
-* Put your personal work in your own folder. We will not push changes of our personal workspaces to github.
-
-   * Then, at the end of each session of work, add your changes to your repository stash:
+ * Alternatively, execute a pull (does fetch and merge).
+```
+    git pull upstream master; 
+```
+2. Put your personal work in your own folder. We will not push changes of our personal workspaces to github.
+3. Then, at the end of each session of work, add your changes to your repository stash:
 ```
      git add myworkspace
 ```
-   * Commit your changes to your local repository
+4. Commit your changes to your local repository
 ```
      git commit -m "my work for labXX"
 ```
-   * Push your changes to your github repository
+5. Push your changes to your github repository
 ```
      git push master
 ```
