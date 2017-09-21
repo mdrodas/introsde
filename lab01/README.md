@@ -19,16 +19,15 @@ $ java -version
 * Revise the slides about&nbsp;Programming in Java, which will give you a very basic&nbsp;overview of the Java programming language.
 * Examine, compile and execute the classes of the Examples.
 * Try it out!
-
 ```
 # Compile
 $ javac examples\HealthProfileReader.java
 ```
 ```
 # Execute the program
-$ java HealthProfileReader Mad Max
+$ java examples.HealthProfileReader Mad Max
 Mad Max is not in the database
-$ java HealthProfileReader John Doe
+$ java examples.HealthProfileReader John Doe
 John Doe's health profile is: Height=1.72, Weight=85.5
 ```
 
@@ -47,15 +46,16 @@ John Doe's health profile is: Height=1.72, Weight=85.5
         5. Replace the main program with a version that takes the method name from command-line arguments and to executes it: 
            ```java HealthProfileReader method_name method_parameters```
            ```Example: java HealthProfileReader displayHealthProfile 1```
+
 * More about Programming in Java
-	* [Java Cheat Sheet][3]&nbsp;&nbsp;
-    * [Java Introductory Tutorial][4] &nbsp;
-    * [Other Java Tutorials][5]&nbsp;
-    * [Recommended book on learning programming with Java][6]&nbsp;
+    * [Java Cheat Sheet][16]
+    * [Java Introductory Tutorial][17]
+    * [Other Java Tutorials][18]
+    * [Recommended book on learning programming with Java][19]
 
 ## Homework: CheckList for NEXT session
 
-### For the Labs we need the following applications:
+### For the Labs we still need the following applications:
 
 * Java (version 1.8) - [download][1]
 * Git (version 2.14) - [download][2]
@@ -69,53 +69,55 @@ John Doe's health profile is: Height=1.72, Weight=85.5
 * Apache Maven (version 3.5) - [download][11]
 * Postman (version 5.2)- [download][12]
 
-### CheckList for GIT Repository
-* If you are not familiar with git, follow the tutorial at [Try Github][7]&nbsp;(15 minutes)&nbsp;
-* Configure your Github account and repository:
-	* Create your account in [Github][13] (if you haven't)
-	* Fork the lab repository to your account (i.e., create a copy of the repository in your github account)
-    ```
-    Go to https://github.com/cdparra/introsde.git.
-    Click on "Fork" in the upper right corner of the page
-    ```
-   	* Clone your fork in your local machine (i.e., download your copy to your machine)
-    ```
-    git clone https://github.com/YOUR_USERNAME/introsde.git
-    ```
-   	* Add the original repository as a remote, in order to Fetch future updates on the original repository (in case there is any)
-    ```
-    git remote add upstream https://github.com/cdparra/introsde.git
-    ```
-	* Learn the Lab session workflow:
-		* Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original);
-    ```
-    git fetch upstream &nbsp;
-    git merge upstream/master;
-    ```
+## Configure your Github account and repository:
+* If you are not familiar with git, follow the tutorial at [Try github][7]&nbsp;(15 minutes)&nbsp;
+* Create your account in [github][13] (if you haven't)
+* Fork the lab repository to your account (i.e., create a copy of the repository in your github account)
+    * Go to https://github.com/mdrodas/introsde.
+    * Click on "Fork" in the upper right corner of the page.
     
-	* On your local repository, inside the folder for the session, create a folder called myworkspace.&nbsp;
-	* Put your personal work in this folder. We will not push changes of our personal workspaces to github.&nbsp;
-	* Then, at the end of each session of work, add your changes to your repository stash
-           ```
-            git add myworkspace
-            ```
-    * Commit your changes to your local repository
-            ```
-            git commit -m "my work for labXX"
-            ```
-    * Push your changes to your github repository
-            ```
-            git push master
-            ```
+* Clone your fork in your local machine (i.e., download your copy to your machine)
+```
+    git clone https://github.com/YOUR_USERNAME/introsde.git
+```
+* Add the original repository as a remote, in order to Fetch future updates on the original repository (in case there is any)
+```
+    git remote add upstream https://github.com/mdrodas/introsde.git
+```
 
-## Additional Checklists
+## Learn the Lab session workflow:
+
+1. Before each session of the Lab, pull the changes from the original repository (i.e., update your local version with changes from the original).
+```
+    git fetch upstream; 
+    git merge upstream/master;
+```
+ * Alternatively, execute a pull (does fetch and merge).
+```
+    git pull upstream master; 
+```
+2. Put your personal work in your own folder. We will not push changes of our personal workspaces to github.
+3. Then, at the end of each session of work, add your changes to your repository stash:
+```
+     git add myworkspace
+```
+4. Commit your changes to your local repository
+```
+     git commit -m "my work for labXX"
+```
+5. Push your changes to your github repository
+```
+     git push master
+```
+
+## Additional Configurations
 
 ### Setting up PATH variables;
 
 We need to create HOME variables and add the bin folder to the PATH for the following applications (if it was not already added):
 * Java (JAVA_HOME and bin folder added to PATH).
 * Ant (ANT_HOME and bin folder added to PATH).
-* Maven (ANT_HOME and bin folder added to PATH).
+* Maven (MAVEN_HOME and bin folder added to PATH).
 * Tomcat (CATALINA_HOME and bin folder added to PATH).
 
 #### In windows:;
@@ -172,7 +174,7 @@ The following are a summary of the You can either download the war package direc
     ...
 ```
 * Deploy the war in tomcat. For this, you need to access the tomcat manager in your browser (http://localhost:8080/manager/html) 
-* Check the configuration file $TOMCAT_HOME/conf/tomcat-users.xml to enable the administration of tomcat(add or uncomment the followin line, if it is there)
+* Check the configuration file $TOMCAT_HOME/conf/tomcat-users.xml to enable the administration of tomcat (add or uncomment the following line, if it is there)
 ```
     <user username="admin" password="whateverpasswordyouwantiuseadmin" roles="admin-gui,manager-gui"/>
 ```
@@ -188,9 +190,7 @@ The following are a summary of the You can either download the war package direc
     Follow the link http://localhost:8080/axis2/axis2-web/HappyAxis.jsp
 ```
 
-* [CHECKPOINT 2] It should should show you a HappyAxis page with the list of n
-
-
+* [CHECKPOINT 2] It should should show you a HappyAxis page with the list of needed libraries and their status (if they are or not in your system).  If the Happy Axis page is coming with GREEN color then it means that axis2 is successfully deployed.
 
 
 [1]: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
@@ -208,4 +208,8 @@ The following are a summary of the You can either download the war package direc
 [13]: http://github.com
 [14]: http://axis.apache.org/axis2/java/core/download.html
 [15]: http://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html
-  
+
+[16]: http://introcs.cs.princeton.edu/java/11cheatsheet/
+[17]: http://www.vogella.com/tutorials/JavaIntroduction/article.html#firstjava
+[18]: http://www.mkyong.com/all-tutorials-on-mkyong-com/
+[19]: http://introcs.cs.princeton.edu/java/home/

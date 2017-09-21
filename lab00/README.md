@@ -68,7 +68,7 @@ For the Labs we need the following applications:
 We need to create HOME variables and add the bin folder to the PATH for the following applications (if it was not already added):
 * Java (JAVA_HOME and bin folder added to PATH).
 * Ant (ANT_HOME and bin folder added to PATH).
-* Maven (ANT_HOME and bin folder added to PATH).
+* Maven (MAVEN_HOME and bin folder added to PATH).
 * Tomcat (CATALINA_HOME and bin folder added to PATH).
 
 #### In windows:;
@@ -142,7 +142,6 @@ The following are a summary of the You can either download the war package direc
 ```
 
 * [CHECKPOINT 2] It should should show you a HappyAxis page with the list of needed libraries and their status (if they are or not in your system).  If the Happy Axis page is coming with GREEN color then it means that axis2 is successfully deployed.
-
 
 
 [1]: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
