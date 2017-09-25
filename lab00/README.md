@@ -89,10 +89,10 @@ We need to create HOME variables and add the bin folder to the PATH for the foll
 ``` 
 # if you are in unix/linux/mac or you are using msysgit from windows
 export CATALINA_HOME=/opt/apache-tomcat-8.5
-# windows (better use the Windows Environment configuration)
+# windows (is better if you use the Windows Environment configuration)
 set CATALINA_HOME=C:\apache-tomcat-8.5
 ```
-* Start the server (to make things easier, add also these binaries to your PATH
+* Start the server (to make things easier, add also these binaries to your PATH)
 ```
 # if you are in unix/linux/mac or you are using msysgit from windows
 $CATALINA_HOME/bin/startup.sh

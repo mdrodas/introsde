@@ -141,7 +141,7 @@ export CATALINA_HOME=/opt/apache-tomcat-8.5
 # windows (better use the Windows Environment configuration)
 set CATALINA_HOME=C:\apache-tomcat-8.5
 ```
-* Start the server (to make things easier, add also these binaries to your PATH
+* Start the server (to make things easier, add also these binaries to your PATH)
 ```
 # if you are in unix/linux/mac or you are using msysgit from windows
 $CATALINA_HOME/bin/startup.sh

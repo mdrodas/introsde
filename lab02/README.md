@@ -14,6 +14,8 @@ The guiding notes below are a summarized version of what is already on the slide
     ```
     $ git fetch upstream
     $ git merge upstream/master
+    ## OR
+    $ git pull upstream master
     ```
 
 ### Using Eclipse (15 min)
@@ -78,7 +80,7 @@ The guiding notes below are a summarized version of what is already on the slide
 * If it shows you something like this, we are OK and you have just **invoked a web service for the first time**.
 ```xml
     <ns:getVersionResponse xmlns:ns="http://axisversion.sample">
-        <ns:return>Hi - the Axis2 version is 1.6.2</ns:return>
+        <ns:return>Hi - the Axis2 version is 1.7.6</ns:return>
     </ns:getVersionResponse>
 ```
 * Now, hit the link "administration" in the axis2 home. The default user/password is admin/axis2. From here, you can deploy/undeploy other services. 
@@ -101,16 +103,13 @@ The guiding notes below are a summarized version of what is already on the slide
 		
 		<!-- the classes that will process incoming messages to the service -->
 		<!-- we are using standar message receivers already bundled with axis2 -->
-		<messageReceivers>
-			<messageReceiver
-				mep="http://www.w3.org/2004/08/wsdl/in-only"
-				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"
-			/>
-			<messageReceiver
-				mep="http://www.w3.org/2004/08/wsdl/in-out"
-				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"
-			/>
-		</messageReceivers>
+    	<messageReceivers>
+        	<messageReceiver 
+            	mep="http://www.w3.org/ns/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+        <messageReceiver
+            mep="http://www.w3.org/ns/wsdl/in-out"
+    class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </messageReceivers>
 		
 		<!-- definition of the xml schema used by the service -->
 		<schema schemaNamespace="http://quickstart.samples/xsd"/>
@@ -202,6 +201,10 @@ Try it!
 ### Exercise 2
 
 * Expose the HealthProfileReader through an axis2 web service
+
+### Exercise 3
+
+* Expose the PersonProfileReader (from exercise 2 - Lab session 1) through an axis2 web service.
 
 ## Additional notes
 
