@@ -20,84 +20,82 @@ import org.xml.sax.SAXException;
 
 public class XPathTestAdvance {
 
-    Document doc;
-    XPath xpath;
+	Document doc;
+	XPath xpath;
 
-    public void loadXML() throws ParserConfigurationException, SAXException, IOException {
+	public void loadXML() throws ParserConfigurationException, SAXException, IOException {
 
-        DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
-        domFactory.setNamespaceAware(true);
-        DocumentBuilder builder = domFactory.newDocumentBuilder();
-        doc = builder.parse("books.xml");
+		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
+		domFactory.setNamespaceAware(true);
+		DocumentBuilder builder = domFactory.newDocumentBuilder();
+		doc = builder.parse("books.xml");
 
-        //creating xpath object
-        getXPathObj();
-    }
+		// creating xpath object
+		getXPathObj();
+	}
 
-    public XPath getXPathObj() {
+	public XPath getXPathObj() {
 
-        XPathFactory factory = XPathFactory.newInstance();
-        xpath = factory.newXPath();
-        return xpath;
-    }
+		XPathFactory factory = XPathFactory.newInstance();
+		xpath = factory.newXPath();
+		return xpath;
+	}
 
-    public Node getBookByName(String bookTitle) throws XPathExpressionException {
+	public Node getBookByName(String bookTitle) throws XPathExpressionException {
 
-        XPathExpression expr = xpath.compile("/bookstore/book[title='" + bookTitle + "']");
-        Node node = (Node) expr.evaluate(doc, XPathConstants.NODE);
-        return node;
-    }
+		XPathExpression expr = xpath.compile("/bookstore/book[title='" + bookTitle + "']");
+		Node node = (Node) expr.evaluate(doc, XPathConstants.NODE);
+		return node;
+	}
 
-    public Node getBookByISBN(String ISBN) throws XPathExpressionException {
+	public Node getBookByISBN(String ISBN) throws XPathExpressionException {
 
-        XPathExpression expr = xpath.compile("/bookstore/book[isbn='" + ISBN + "']");
-        Node node = (Node) expr.evaluate(doc, XPathConstants.NODE);
-        return node;
-    }
+		XPathExpression expr = xpath.compile("/bookstore/book[isbn='" + ISBN + "']");
+		Node node = (Node) expr.evaluate(doc, XPathConstants.NODE);
+		return node;
+	}
 
-    public NodeList getBooksByPrice(String price, String condition) throws XPathExpressionException {
+	public NodeList getBooksByPrice(String price, String condition) throws XPathExpressionException {
 
-        XPathExpression expr = xpath.compile("//book[price " + condition + "'" + price + "']");
-        NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
-        return nodes;
+		XPathExpression expr = xpath.compile("//book[price " + condition + "'" + price + "']");
+		NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		return nodes;
 
-    }
+	}
 
-    public Node getBookByAuthorUsingAxis(String authorName) throws XPathExpressionException {
+	public Node getBookByAuthorUsingAxis(String authorName) throws XPathExpressionException {
 
-        XPathExpression expr = xpath.compile("//child::book[author='" + authorName + "']");
-        Node node = (Node) expr.evaluate(doc, XPathConstants.NODE);
-        return node;
-    }
+		XPathExpression expr = xpath.compile("//child::book[author='" + authorName + "']");
+		Node node = (Node) expr.evaluate(doc, XPathConstants.NODE);
+		return node;
+	}
 
-    public static void main(String[] args) throws ParserConfigurationException, SAXException,
-            IOException, XPathExpressionException {
+	public static void main(String[] args)
+			throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
 
-        XPathTestAdvance test = new XPathTestAdvance();
-        test.loadXML();
+		XPathTestAdvance test = new XPathTestAdvance();
+		test.loadXML();
 
-        //getting node by book name
-        Node node = test.getBookByName("Snow Crash");
-        System.out.println("Node name: " + node.getNodeName());
-        System.out.println("My childs text contents :" + node.getTextContent());
+		// getting node by book name
+		Node node = test.getBookByName("Snow Crash");
+		System.out.println("Node name: " + node.getNodeName());
+		System.out.println("My childs text contents :" + node.getTextContent());
 
-        //getting node by ISBN number
-        node = test.getBookByISBN("0553573862");
-        System.out.println(node.getTextContent());
+		// getting node by ISBN number
+		node = test.getBookByISBN("0553573862");
+		System.out.println(node.getTextContent());
 
+		// getting book by price
+		NodeList nodes = test.getBooksByPrice("10", ">");
+		System.out.println("Books having price > 10");
+		System.out.println("Book-1");
+		System.out.println(nodes.item(0).getTextContent());
+		System.out.println("Book-2");
+		System.out.println(nodes.item(1).getTextContent());
 
-        //getting book by price 
-        NodeList nodes = test.getBooksByPrice("10", ">");
-        System.out.println("Books having price > 10");
-        System.out.println("Book-1");
-        System.out.println(nodes.item(0).getTextContent());
-        System.out.println("Book-2");
-        System.out.println(nodes.item(1).getTextContent());
-
-
-        //getting book by authorName using AXIS approach
-        System.out.println("Getting book by author name:");
-        node = test.getBookByAuthorUsingAxis("Larry Niven");
-        System.out.println(node.getTextContent());
-    }
+		// getting book by authorName using AXIS approach
+		System.out.println("Getting book by author name:");
+		node = test.getBookByAuthorUsingAxis("Larry Niven");
+		System.out.println(node.getTextContent());
+	}
 }

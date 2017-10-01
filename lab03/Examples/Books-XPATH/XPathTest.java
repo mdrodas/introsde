@@ -15,26 +15,26 @@ import org.xml.sax.SAXException;
 
 public class XPathTest {
 
-	  public static void main(String[] args)  throws ParserConfigurationException, SAXException,
-	          											IOException, XPathExpressionException {
+	public static void main(String[] args)
+			throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
 
-	    DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
-	    domFactory.setNamespaceAware(true);
-	    DocumentBuilder builder = domFactory.newDocumentBuilder();
-	    System.out.println("Loading books.xml...");
-	    Document doc = builder.parse("books.xml");
+		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
+		domFactory.setNamespaceAware(true);
+		DocumentBuilder builder = domFactory.newDocumentBuilder();
+		System.out.println("Loading books.xml...");
+		Document doc = builder.parse("books.xml");
 
-	    XPathFactory factory = XPathFactory.newInstance();
-	    XPath xpath = factory.newXPath();
-	    System.out.println("Reading list of titles...");
-	    System.out.println("(using xpath = /bookstore/book/title/text()");
-	    XPathExpression expr = xpath.compile("/bookstore/book/title/text()");
+		XPathFactory factory = XPathFactory.newInstance();
+		XPath xpath = factory.newXPath();
+		System.out.println("Reading list of titles...");
+		System.out.println("(using xpath = /bookstore/book/title/text()");
+		XPathExpression expr = xpath.compile("/bookstore/book/title/text()");
 
-	    Object result = expr.evaluate(doc, XPathConstants.NODESET);
-	    NodeList nodes = (NodeList) result;
-	    for (int i = 0; i < nodes.getLength(); i++) {
-	        System.out.println(nodes.item(i).getNodeValue());
-	    }
+		Object result = expr.evaluate(doc, XPathConstants.NODESET);
+		NodeList nodes = (NodeList) result;
+		for (int i = 0; i < nodes.getLength(); i++) {
+			System.out.println(nodes.item(i).getNodeValue());
+		}
 
-	  }
+	}
 }

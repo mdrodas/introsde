@@ -1,12 +1,8 @@
 # LAB03: XML, XPATH & XML Schemas
 
-**Introduction to Service Design and Engineering | University of Trento | [Webpage](https://sites.google.com/site/introsdeunitn/lab-sessions/lab-session-3 "Permalink to LAB03: XML and XPATH")**
+**Introduction to Service Design and Engineering | University of Trento **
 
 How do services communicate? What's the language (or 'one' of their languages) in which messages traverse the realms of SOAs?. In this module, we will give a practical look to the cornerstone language of service-oriented architectures: XML. We will do so by exploring a framework for navigating the content of an xml programmatically.  
-
-## Slides &amp; Code
-
-Links: [PPT slides][1] | [PDF slides][2] | [Source code][3]
 
 ## Guiding Notes
 
@@ -338,10 +334,6 @@ The guiding notes below are a summarized version of what is already on the slide
         </kunde>
     ```
 
-
-[1]: https://drive.google.com/file/d/0B7ShzcEnCJFNVi1LWERhbVFoQ3c/edit?usp=sharing
-[2]: https://github.com/cdparra/introsde/tree/master/lab02/Example/
-[3]: https://drive.google.com/file/d/0B7ShzcEnCJFNNWttdGRvZmpIZUE/edit?usp=sharing
 [4]: http://xmltoolbox.appspot.com/xpathevaluator.html 
 [5]: http://www.stylusstudio.com/docs/v62/d_xpath15.html
 [6]: http://xmlgrid.net/ 
