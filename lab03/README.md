@@ -1,6 +1,6 @@
 # LAB03: XML, XPATH & XML Schemas
 
-**Introduction to Service Design and Engineering | University of Trento **
+**Introduction to Service Design and Engineering | University of Trento**
 
 How do services communicate? What's the language (or 'one' of their languages) in which messages traverse the realms of SOAs?. In this module, we will give a practical look to the cornerstone language of service-oriented architectures: XML. We will do so by exploring a framework for navigating the content of an xml programmatically.  
 
@@ -30,7 +30,7 @@ The guiding notes below are a summarized version of what is already on the slide
 ### XPATH Examples (30 min)
 * XPATH is one of the ways for reading an XML document tree 
 * XPath is a *query language* that uses *path expressions* to navigate the XML a query information inside them. 
-* To learn XPATH by doing, open this [online evaluator][4] and try on it each of the examples listed below. 
+* To learn XPATH by doing, open this [online evaluator][1] and try on it each of the examples listed below. 
 * Copy the content of *books.xml* (in the Example folder) and paste it in the "Xml Field"
 * Let's start with this example to get the node *publisher* from the first *book*
 
@@ -135,11 +135,11 @@ The guiding notes below are a summarized version of what is already on the slide
 
 ### XSD Examples
 * **Exercise 1**
-    * Open this [XML/XSD validation tool online][8]
+    * Open this [XML/XSD validation tool online][5]
     * Copy the content of the first example Example/xml-schemas/Example1.xml and validate its against its XSD
     * Modify the Example 1 by adding a **Health Profile** as defined in the XSD, then validate it 
 * **Exercise 2**
-    * Go to the [online validator][8] 
+    * Go to the [online validator][5] 
     * Copy the Example 5 xsd in the examples folder into the XSD Schema.
     * Create a valid XML instance of this schema
 * Check the other examples and the extended reference at the end of this page for more information
@@ -148,17 +148,17 @@ The guiding notes below are a summarized version of what is already on the slide
 ## Additional notes and examples
 
 ### Try XPATH to scrape content from a website 
-* Get [scraper][7] (chrome only extension)
+* Get [scraper][4] (chrome only extension)
 * Go to meteotrentino.it
 * Righclick on top of one of the temperatures and click "Scrape Similar", which scrapes the content on the page using xpath (the HTML document it is also treated like a DOM tree)
 
 ### Other suggested resources
-* Learn more about XML Schemas in [W3Schools][9] or [here][10]
-* [XPATH reference][5]
-* [XML editor with a grid view that shows you XPATH of each node][6]
+* Learn more about XML Schemas in [W3Schools][6] or [here][7]
+* [XPATH reference][2]
+* [XML editor with a grid view that shows you XPATH of each node][3]
 * Other online XML validators 
-    * [Decisionsoft schemaValidate][11] 
-    * [Utilities-Online][12] 
+    * [Decisionsoft schemaValidate][8] 
+    * [Utilities-Online][9] 
 
 ### More of XML/XSD reference and examples
 
@@ -334,12 +334,13 @@ The guiding notes below are a summarized version of what is already on the slide
         </kunde>
     ```
 
-[4]: http://xmltoolbox.appspot.com/xpathevaluator.html 
-[5]: http://www.stylusstudio.com/docs/v62/d_xpath15.html
-[6]: http://xmlgrid.net/ 
-[7]: https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd
-[8]: http://www.utilities-online.info/xsdvalidation/#.Ul0rkGRvj40
-[9]: http://www.w3schools.com/schema/default.asp
-[10]: http://www.xfront.com/files/xml-schema.html
-[11]: http://tools.decisionsoft.com/schemaValidate/
-[12]: http://www.utilities-online.info/xsdvalidation/#.Ul0rkGRvj40
+
+[1]: http://xmltoolbox.appspot.com/xpathevaluator.html 
+[2]: http://www.stylusstudio.com/docs/v62/d_xpath15.html
+[3]: http://xmlgrid.net/ 
+[4]: https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd
+[5]: http://www.utilities-online.info/xsdvalidation/#.Ul0rkGRvj40
+[6]: http://www.w3schools.com/schema/default.asp
+[7]: http://www.xfront.com/files/xml-schema.html
+[8]: http://tools.decisionsoft.com/schemaValidate/
+[9]: http://www.utilities-online.info/xsdvalidation/#.Ul0rkGRvj40
