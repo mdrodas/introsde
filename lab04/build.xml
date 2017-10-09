@@ -18,7 +18,7 @@
 <project name="JAXBExample" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
 
 	<!-- PART 1: Ivy properties, download, installation and configuration -->
-	<property name="ivy.install.version" value="2.4.0-rc1" />
+	<property name="ivy.install.version" value="2.4.0" />
 	<property name="ivy.jar.dir" value="${basedir}/ivy" />
 	<property name="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
 

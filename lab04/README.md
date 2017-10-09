@@ -213,9 +213,6 @@ For the purpose of mapping XML (and JSON) to and from Objects (i.e., serializing
 * A library that supports reusing JAXB annotations for mapping also to and from JSON is [Jackson][12]. 
 * Open and run **HealthProfileJson** Example to see how it works
 
-## Additional notes
-
-* Checkout the details of [Assignment 1][13] and stay tune for the deadline announcement in the hands-on session. 
 
 [1]: https://drive.google.com/open?id=0B7ShzcEnCJFNSGEzdWltNUtIa3M
 [2]: https://drive.google.com/file/d/0B7ShzcEnCJFNTTUwcy1QcGZMRjg/edit?usp=sharing
