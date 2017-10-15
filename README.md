@@ -1,7 +1,7 @@
 IntroSDE@UniTN 2017
 ============
 
-Lab resources, code samples and other materials used in the course about [Introduction to Service Design and Engineering][1], developed at the [Department of Information Engineering and Computer Science][2] of the [University of Trento, Italy][3]. 
+Lab resources, code samples and other materials used in the course about Introduction to Service Design and Engineering, developed at the [Department of Information Engineering and Computer Science][2] of the [University of Trento, Italy][3]. 
 
 ## Lab Modules Index
 
