@@ -1,6 +1,6 @@
 # LAB05: The REST architectural style & RESTful web services (1)
 
-**Introduction to Service Design and Engineering | University of Trento | [Webpage](https://sites.google.com/site/introsdeunitn/lab-sessions/lab-session-5 "Permalink to LAB05: The REST architectural style & RESTful web services (1)")**
+**Introduction to Service Design and Engineering | University of Trento**
 
 Whenever we talk about the **World Wide Web** and its underlying architectural principles, what we are really talking about is REST. What is to say, the **Representational state transfer** is an abstraction of the architecture of the WWW. In this module, we will explore the basis for designing and implementing services following this architectural style.  
 
@@ -169,7 +169,7 @@ Links: [PPT slides][1] | [PDF slides][2] | [Source code][3]
       </servlet>
       <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
-        <url-pattern>/jersey/*</url-pattern>
+        <url-pattern>/rest/*</url-pattern>
       </servlet-mapping>
     </web-app>
     ```
