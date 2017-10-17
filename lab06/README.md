@@ -2,7 +2,7 @@
 
 **Introduction to Service Design and Engineering | University of Trento | [Webpage](https://sites.google.com/site/introsdeunitn/lab-sessions/lab-session-5 "Permalink to LAB06: CRUD RESTful Services (2)")**
 
-In its first installment, we have explored the principles behind the REST architectural style and how to create a simple read-only RESTful web service. In this module, we will deepen our understanding by implement a set of CRUD RESTful services for our Health Profile example.  
+In its first installment, we have explored the principles behind the REST architectural style and how to create a simple read-only RESTful web service. In this module, we will deepen our understanding by implement a set of CRUD RESTful services.  
 
 ## Slides &amp; Code
 
@@ -10,7 +10,7 @@ Links: [PPT slides][1] | [PDF slides][2] | [Source code][3]
 
 ## Guiding Notes
 
-* In the firtst part of the REST Services module, we revisited the principles behind the REST architectural style and went through some initial read-only examples of how to implement these services. In this module, we will extend those examples to have a complete CRUD API for our HealthProfile service Design
+* In the firtst part of the REST Services module, we revisited the principles behind the REST architectural style and went through some initial read-only examples of how to implement these services. In this module, we will extend those examples to have a complete CRUD API.
 
 ### CRUD RESTful Example: Setting up the project (10 min) 
 
