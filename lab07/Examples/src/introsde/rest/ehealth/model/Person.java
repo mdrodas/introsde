@@ -4,6 +4,9 @@ import introsde.rest.ehealth.dao.LifeCoachDao;
 import introsde.rest.ehealth.model.LifeStatus;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElementWrapper;
@@ -18,7 +21,7 @@ import java.util.List;
  * 
  */
 @Entity
-@Table(name="\"Person\"")
+@Table(name="Person")
 @NamedQuery(name="Person.findAll", query="SELECT p FROM Person p")
 @XmlRootElement
 public class Person implements Serializable {
@@ -34,7 +37,7 @@ public class Person implements Serializable {
 //	@TableGenerator(name="sqlite_person", table="sqlite_sequence",
 //	    pkColumnName="name", valueColumnName="seq",
 //	    pkColumnValue="Person")
-//	@Column(name="idPerson")
+	@Column(name="idPerson")
 	private int idPerson;
 
 	@Column(name="lastname")
@@ -46,9 +49,8 @@ public class Person implements Serializable {
 	@Column(name="username")
 	private String username;
 	
-	@Temporal(TemporalType.DATE)
 	@Column(name="birthdate")
-	private Date birthdate;
+	private String birthdate;
 	
 	@Column(name="email")
 	private String email;
@@ -61,11 +63,18 @@ public class Person implements Serializable {
 	}
 	
 	public Date getBirthdate() {
-		return this.birthdate;
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		Date startDate = null;
+		try {
+			startDate = df.parse(this.birthdate);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return startDate;
 	}
 
 	public void setBirthdate(Date birthdate) {
-		this.birthdate = birthdate;
+		this.birthdate = birthdate.toString();
 	}
 
 	public String getEmail() {

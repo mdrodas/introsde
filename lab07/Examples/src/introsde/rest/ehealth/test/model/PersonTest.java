@@ -113,8 +113,8 @@ public class PersonTest {
 		int personOriginalCount = list.size();
 		
 		Person p = new Person();
-		p.setName("Pinco");
-		p.setLastname("Pallino");
+		p.setName("Jojn");
+		p.setLastname("Doe");
 		Calendar c = Calendar.getInstance();
 		c.set(1984, 6, 21);
 		p.setBirthdate(c.getTime());

@@ -33,10 +33,11 @@ public class LifeStatus implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(generator="sqlite_lifestatus")
-	@TableGenerator(name="sqlite_lifestatus", table="sqlite_sequence",
-	    pkColumnName="name", valueColumnName="seq",
-	    pkColumnValue="LifeStatus")
+	@GeneratedValue
+	//@GeneratedValue(generator="sqlite_lifestatus")
+	//@TableGenerator(name="sqlite_lifestatus", table="sqlite_sequence",
+	 //   pkColumnName="name", valueColumnName="seq",
+	 //   pkColumnValue="LifeStatus")
 	@Column(name = "idMeasure")
 	private int idMeasure;
 
