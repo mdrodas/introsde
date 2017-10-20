@@ -42,7 +42,10 @@
         <!-- Library for standalone deployment example -->
         <dependency org="org.glassfish.jersey.containers" name="jersey-container-servlet" rev="2.26"/>
         <dependency org="org.glassfish.jersey.containers" name="jersey-container-jdk-http" rev="2.26"/>
-		<dependency org="org.glassfish.jersey.media" name="jersey-media-json-jackson" rev="2.26"/>
+        <dependency org="org.glassfish.jersey.containers" name="jersey-container-jetty-http" rev="2.26"/>
+        <dependency org="org.glassfish.jersey.media" name="jersey-media-json-jackson" rev="2.26"/>
+		<dependency org="org.glassfish.jersey.inject" name="jersey-hk2" rev="2.26"/>
+		
         
         <!--JACKSON dependencies-->
         <dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.9.2"/>
