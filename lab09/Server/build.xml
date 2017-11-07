@@ -97,7 +97,7 @@
 		<echo message="catalog.xml has been deleted" />
 	</target>
 
-	<target name="compile">
+	<target name="compile" depends="init">
 		<echo message="Compile target has been called" />
 		<javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="lib.path.id" includeAntRuntime="false">
 		</javac>
@@ -106,18 +106,11 @@
 				<include name="*.xml" />
 			</fileset>
 		</copy>
-		<!-- The following operation mkdir and copy might change with the time (November 2016)-->
-		<mkdir dir="${web.dir}/WebContent/WEB-INF/classes/META-INF" />
-		<copy todir="${web.dir}/WebContent/WEB-INF/classes/META-INF" overwrite="true">
-			<fileset dir="${src.dir}/META-INF">
-				<include name="*.xml" />
-			</fileset>
-		</copy>
 	</target>
 
 	<!-- make sure you have created first the WebContent folder, including a META-INF folder, WEB-INF/web.xml file and WEB-INF/lib folder --> 
 	<target name="create.war" depends="compile">
-		<war destfile="sdelab08.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
+		<war destfile="sdelab09.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
 			<fileset dir="${web.dir}/WebContent">
 				<include name="**/*.*"/>
 			</fileset>

@@ -21,22 +21,23 @@
        xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
     <info
         organisation="introsde"
-        module="lab08"
+        module="lab09"
         status="integration">
 	</info>
 	
 	<dependencies>
         <!-- JAX-WS bundle dependency --> 
-        <dependency org="com.sun.xml.ws" name="jaxws-rt" rev="2.2.8"/>
+        <dependency org="com.sun.xml.ws" name="jaxws-rt" rev="2.3.0"/>
 	
         <!-- Other dependencies -->
-        <dependency org="org.xerial" name="sqlite-jdbc" rev="3.7.2"/>
+        <dependency org="org.xerial" name="sqlite-jdbc" rev="3.20.1"/>
         <dependency org="javax.ejb" name="javax.ejb-api" rev="3.2"/>
-        <dependency org="org.eclipse.persistence" name="javax.persistence" rev="2.1.0"/>
-        <dependency org="org.eclipse.persistence" name="org.eclipse.persistence.jpa" rev="2.5.2"/>
-        <dependency org="org.eclipse.persistence" name="org.eclipse.persistence.nosql" rev="2.5.2"/>
+        <dependency org="org.eclipse.persistence" name="javax.persistence" rev="2.2.0"/>
+        <dependency org="org.eclipse.persistence" name="org.eclipse.persistence.jpa" rev="2.7.0"/>
+        <dependency org="org.eclipse.persistence" name="org.eclipse.persistence.nosql" rev="2.7.0"/>
+        
         <dependency org="net.sf.dozer" name="dozer" rev="5.5.1"/>
-        <dependency org="joda-time" name="joda-time" rev="2.4"/>
-        <dependency org="org.slf4j" name="slf4j-nop" rev="1.7.7"/>
+        <!--<dependency org="joda-time" name="joda-time" rev="2.4"/>-->
+        <dependency org="org.slf4j" name="slf4j-nop" rev="1.7.25"/>
     </dependencies>
 </ivy-module>
