@@ -242,16 +242,6 @@ Links: [Source code][1]
 * Using postman and the request examples from the last session, try to send requests via HTTP
 * Complete the client above implemented the call to all the other methods in the class
 
-## Additional Notes
-
-### Integrating IVY to a Web Project
-* To get you all what you need for this module, we will use **IVY**. The **ivy.xml** in the lab source code folder defines the list of libraries we need.   
-* **With ANT:** the **build.xml** contains targets to download the ivy.jar, the dependencies and then copy all these jars to the web project classpath (which will be the **WebContent/WEB-INF/lib** folder)
-* **With Eclipse:** to integrate IVY to Eclipse's classpath, right click on the ivy.xml file and select **Add Ivy Library**. 
- * In the window that follows, in order for ivy to work also when deploying the services into Tomcat from Eclipse, we will configure IVY to put jars  into the project's **WebContent/WEB-INF/lib** folder. 
- * Go to the **Claspath tab** and marke **Enable project specific settings**. 
- * On **Build the classpath with** enable the option **retrieved artifacts**
- * On **Retrieve Pattern** put **WebContent/WEB-INF/lib/[type]s-[artifact]-[revision].[ext]**
 
 ### Other Resources 
  
@@ -260,7 +250,7 @@ Links: [Source code][1]
 * [SOAP Binding: difference between Document and RPC Style][4]
 * Tutorial that mixes [JAX-WS with JPA][5]
 
-[1]: https://github.com/cdparra/introsde/tree/master/lab08
+[1]: https://github.com/mdrodas/introsde/tree/master/lab08
 [2]: http://www.mkyong.com/tutorials/jax-ws-tutorials/
 [3]: http://docs.oracle.com/javaee/5/tutorial/doc/bnayl.html
 [4]: http://java.globinch.com/enterprise-java/web-services/soap-binding-document-rpc-style-web-services-difference/#document_style_rpc_style
